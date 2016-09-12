@@ -23,6 +23,9 @@ android:
     - sys-img-armeabi-v7a-android-22
     - sys-img-x86-android-17
     
+before_install:
+    - chmod +x gradlew
+    
 notifications:
     email: false
     slack: vlouzada-vvidigal:xSXHxikcpIeuWfQLSczJUnUO
