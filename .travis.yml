@@ -1,23 +1,26 @@
 language: android
-jdk: oraclejdk7
+jdk: oraclejdk8
 env:
-  matrix:
-    - ANDROID_TARGET=android-17  ANDROID_ABI=armeabi-v7a
- 
-before_install:
- - chmod +x gradlew
+  global:
+    - ANDROID_TARGET=android-15
+    - ANDROID_ABI=armeabi-v7a
 android:
   components:
-    - build-tools-23.0.3
- 
-before_script:
-  # Create and start emulator
+  - tools
+  - platform-tools
+  - build-tools-23.0.3
+  - android-23
+  - extra-android-m2repository
+  - sys-img-${ANDROID_ABI}-${ANDROID_TARGET}
+script:
+  - ./gradlew build jacocoTestReport assembleAndroidTest
   - echo no | android create avd --force -n test -t $ANDROID_TARGET --abi $ANDROID_ABI
   - emulator -avd test -no-skin -no-audio -no-window &
-  - adb wait-for-device
-  - adb shell input keyevent 82 &
- 
-script: ./gradlew connectedAndroidTest
+  - android-wait-for-emulator
+  - adb shell setprop dalvik.vm.dexopt-flags v=n,o=v
+  - ./gradlew connectedCheck
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
 
 notifications:
     email: false
