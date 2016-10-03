@@ -8,3 +8,26 @@ Além dos rankings nos grupos existe o ranking geral, e tanto os grupos quanto o
 O sistema possuirá um feedback onde o administrador ou o próprio usuário poderá ver onde mais errou e onde mais acertou.
 As questões são baseadas em operações aritméticas de soma, subtração, multiplicação e divisão, podendo até ser usada mais de uma operação em cada questão presente nos balões.
 O sistema deve ser capaz de cadastrar usuários, e permitir a criação de grupos, bem como formar o relatório de erros e acertos.<p>
+<p>Requisitos Funcionais<p>
+<ul>
+<li>O sistema deve contabilizar o numero de acertos e erros.</li>
+<li>O sistema deve gerar as operações e suas respectivas respostas a serem colocadas nos baloes.</li>
+<li>O sistema deve contabilizar o numero de vidas.</li>
+<li>O sistema deve ter a opção de pausar o jogo.</li>
+<li>O sistema deve poder dar continuidade de um jogo pausado.</li>
+</ul>
+<p>Requisitos não funcionais<p>
+<ul>
+<li>O sistema deve controlar o acesso de usuários através de login e senha.</li>
+<li>O sistema de jogo deve ser desenvolvido para uma plataforma mobile.</li>
+<li>A GUI do sistema deverá ser intuitiva.</li>
+<li>O sistema deve ser desenvolvido utilizando a linguagem java (mobile).</li>
+<li>O sistema deve armazenar a senha dos usuários de forma segura</li>
+<li>O sistema deve possuir uma SGBD</li>
+</ul>
+<p>Regras de negócio<p>
+<ul>
+<li>O jogo termina quando a quantidade de vidas chegar a zero.</li>
+<li>O nivel de dificuldade aumenta coforme o tempo jogado.</li>
+<li>A velocidade aumenta conforme o tempo jogado.</li>
+</ul>
