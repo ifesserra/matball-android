@@ -31,3 +31,4 @@ O sistema deve ser capaz de cadastrar usuários, e permitir a criação de grupo
 <li>O nivel de dificuldade aumenta coforme o tempo jogado.</li>
 <li>A velocidade aumenta conforme o tempo jogado.</li>
 </ul>
+<p>Pitch: https://www.youtube.com/watch?v=LdL-VSqv7-k</p>
